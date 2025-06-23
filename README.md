@@ -30,16 +30,16 @@ dev-env/
 │   ├── setup.sh                # Provisioning and GitHub authentication script
 │   └── .env                    # Environment variables (excluded from Git)
 ├── docs/                       # Step-by-step technical documentation
-│   ├── 01 – Installing WSL and Ubuntu 24.04.md
-│   ├── 02 – Setting up Docker Desktop with WSL2.md
-│   ├── 03 – Understanding Dev Containers.md
-│   ├── 04 – Creating a Dev Container Project.md
-│   ├── 05 – Authenticating with GitHub inside Dev Containers.md
-│   ├── 06 – Customizing with Dotfiles and VS Code Settings.md
-│   ├── 07 – Making Your Environment Portable.md
-│   ├── 08 – Dev Container Approaches Features vs Dockerfile vs Prebuilt Images.md
-│   ├── 09 – Templates and Starters.md
-│   └── 10 – Troubleshooting Dev Containers.md
+│   ├── 01-Installing-WSL-and-Ubuntu-24.04.md
+│   ├── 02-Setting-up-Docker-Desktop-with-WSL2.md
+│   ├── 03-Understanding-Dev-Containers.md
+│   ├── 04-Creating-a-Dev-Container-Project.md
+│   ├── 05-Authenticating-with-GitHub-inside-Dev-Containers.md
+│   ├── 06-Customizing-with-Dotfiles-and-VS-Code-Settings.md
+│   ├── 07-Making-Your-Environment-Portable.md
+│   ├── 08-Dev-Container-Approaches-Features-vs-Dockerfile-vs-Prebuilt-Images.md
+│   ├── 09-Templates-and-Starters.md
+│   └── 10-Troubleshooting-Dev-Containers.md   
 ├── README.md                   # Project introduction and documentation map
 ├── .gitignore                  # Git exclusions for sensitive files
 └── (project-specific files)
