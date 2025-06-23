@@ -47,9 +47,46 @@ dev-env/
 
 ---
 
+## Authentication Quick Check
+
+Inside the Dev Container, verify GitHub authentication and Git configuration:
+
+```bash
+git config --get user.name
+git config --get user.email
+gh auth status
+gh auth token
+```
+
+Confirm that:
+
+* GitHub CLI is authenticated.
+* Git is configured with the correct user.
+* The active Personal Access Token is valid.
+
+To validate repository access:
+
+```bash
+gh repo view <organization-or-user>/<repository-name> --json name,visibility,viewerPermission
+```
+
+Expected `viewerPermission` should be `WRITE` or `ADMIN`.
+
+Test push permissions safely:
+
+```bash
+git push --dry-run origin main
+```
+
+---
+
 ## Quick Start Guide
 
-### 1. Clone the Repository
+There are two primary scenarios when working with this project:
+
+### Case 1: Cloning an Existing Repository
+
+#### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-repository.git
@@ -57,7 +94,7 @@ cd your-repository
 code .
 ```
 
-### 2. Prepare the `.env` File
+#### 2. Prepare the `.env` File
 
 Inside `.devcontainer/.env` (create if missing):
 
@@ -69,7 +106,7 @@ GIT_EMAIL=your-email@example.com
 
 > Do not commit the `.env` file. It must be excluded via `.gitignore`.
 
-### 3. Launch the Dev Container
+#### 3. Launch the Dev Container
 
 When prompted by Visual Studio Code:
 
@@ -81,7 +118,7 @@ Or manually run:
 F1 → Dev Containers: Rebuild Container Without Cache
 ```
 
-### 4. Validate the Setup
+#### 4. Validate the Setup
 
 Inside the Dev Container, execute:
 
@@ -97,6 +134,60 @@ Expected Results:
 * GitHub user is correctly loaded.
 * GitHub CLI authentication is successful.
 * User identity inside the container is `vscode`.
+
+---
+
+### Case 2: Initializing a New GitHub Repository
+
+Follow these steps to create and push a new GitHub repository from the Dev Container:
+
+#### 1. Initialize Local Repository
+
+```bash
+git init
+```
+
+#### 2. Configure Remote Repository
+
+```bash
+git remote add origin https://github.com/<organization-or-user>/<repository-name>.git
+```
+
+#### 3. Stage Project Files
+
+```bash
+git add .
+```
+
+#### 4. Create Initial Commit
+
+```bash
+git commit -m "Initial project setup with devcontainer configuration"
+```
+
+#### 5. Push to Remote Repository
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+#### 6. Verify Remote Configuration
+
+```bash
+git remote -v
+```
+
+Ensure the remote URL uses HTTPS.
+
+#### 7. Final Authentication Validation
+
+```bash
+git pull origin main
+git push origin main
+```
+
+Confirm that GitHub authentication and push access are working correctly.
 
 ---
 
