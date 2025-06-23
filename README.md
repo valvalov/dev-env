@@ -254,5 +254,7 @@ Detailed step-by-step guides are available in the `docs/` folder.
 ---
 
 ## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This project is licensed under the [MIT License](LICENSE).
 
-This project is provided under the **MIT License**.
+---
