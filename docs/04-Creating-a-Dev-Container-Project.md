@@ -169,11 +169,3 @@ Expected results:
 * The Microsoft Dev Container base image fully supports VS Code integration and includes common development tools.
 * No user management is required. The `vscode` user with UID 1000 is provided by default.
 * Ensure `.devcontainer/.env` is properly excluded from version control.
-
----
-
-## Next Steps
-
-* Proceed to [05 – Authenticating with GitHub Inside Dev Containers](./05%20%E2%80%93%20Authenticating%20with%20GitHub%20Inside%20Dev%20Containers.md) to configure secure GitHub access.
-* Explore [09 – Templates and Starters](./09%20–%20Templates%20and%20Starters.md) to scaffold new environments.
-* For an overview of container strategies, see [08 – Dev Container Approaches](./08%20–%20Dev%20Container%20Approaches%20Features%20vs%20Dockerfile%20vs%20Prebuilt%20Images.md).
